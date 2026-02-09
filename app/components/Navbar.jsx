@@ -6,6 +6,7 @@ import NavLink from "./NavLink";
 import { title } from "process";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
+import { colors } from "@/app/lib/colors";
 
 const NavLinks = [
   { title: "Accueil", path: "#Acceuil" },
@@ -16,7 +17,7 @@ const NavLinks = [
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   return (
-    <nav className="fixed py-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-90 border-b border-gray-700">
+    <nav style={{ backgroundColor: colors.background.dark }} className="fixed py-0 left-0 right-0 z-10 bg-opacity-90 border-b border-gray-700">
       <div className="flex flex-wrap items-center justify-between mx-auto py-3 px-4">
         <Link
           href={"/"}

@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import ProjectCard from "./ProjectCard";
+import { colors } from "@/app/lib/colors";
 
 const PROJECTS_DATA = [
   {
@@ -40,11 +42,11 @@ const ProjectsSection = () => {
       <h2 className="text-center text-4xl font-bold text-white mt-4">
         Projets
       </h2>
-      <div>
-        <button className="text-white flex flex-row justify-center items-center gap-2 border-2 border-[#ABD7BE] rounded-full px-4 py-2 mt-6 mx-auto hover:bg-[#ABD7BE] hover:text-black transition-colors duration-300">
+      <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
+        <button style={{ borderColor: colors.border.lightGreen }} className="border-2 rounded-full px-4 py-2 mt-6 mx-auto hover:text-black transition-colors duration-300" onMouseEnter={(e) => e.target.style.backgroundColor = colors.secondary.green} onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}>
           Voir tous les projets
         </button>
-        <button className="text-white flex flex-row justify-center items-center gap-2 border-2 border-[#ABD7BE] rounded-full px-4 py-2 mt-6 mx-auto hover:bg-[#ABD7BE] hover:text-black transition-colors duration-300">
+        <button style={{ borderColor: colors.border.lightGreen }} className="border-2 rounded-full px-4 py-2 mt-6 mx-auto hover:text-black transition-colors duration-300" onMouseEnter={(e) => e.target.style.backgroundColor = colors.secondary.green} onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}>
           projet WEB
         </button>
       </div>
